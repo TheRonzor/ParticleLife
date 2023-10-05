@@ -176,7 +176,7 @@ class World:
     
     def compute_distances(self):
         '''
-        Compute the Minkowski distance between
+        Compute the Minkowski distance (on a torus) between
         all particles and store the distance 
         matrix in condensed form.
         '''

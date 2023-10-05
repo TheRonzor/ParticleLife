@@ -40,7 +40,7 @@ class RonSlider(RonSliderBase):
         elif orient=='vertical':
             self.slider = qtw.QSlider(qt.Vertical)
         else:
-            raise ValueError("Orientation must be 'horizontal' or 'vertical'.'" 
+            raise ValueError("Orientation must be 'horizontal' or 'vertical'. '" 
                              + str(orient) + "' is not recognized.")
         
         self.slider.setMinimum(self.vmin)
@@ -93,7 +93,7 @@ class HSliderLabelAbove(qtw.QVBoxLayout):
 
         self.display = qtw.QLabel(format(self.slider.get_value(), self.fmt))
         self.display.setAlignment(qt.AlignCenter)
-        self.slider.valueChanged.connect(self.UpdateDisplay)
+        self.slider.valueChanged.connect(self.update_display)
 
         self.addWidget(self.display)
         self.addWidget(self.slider.slider)
@@ -101,7 +101,8 @@ class HSliderLabelAbove(qtw.QVBoxLayout):
         self.get_value = self.slider.get_value
         self.set_value = self.slider.set_value
         return
-    def UpdateDisplay(self):
+    
+    def update_display(self):
         self.display.setText(format(self.slider.get_value(), self.fmt))
         return
 
