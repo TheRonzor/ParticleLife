@@ -1,3 +1,11 @@
+##########################################################################
+#                                                                        #
+#      May you do good and not evil                                      #
+#      May you find forgiveness for yourself and forgive others          #
+#      May you share freely, never taking more than you give.            #
+#                                                                        #
+##########################################################################
+
 import numpy as np
 from PyQt5 import QtGui as qtg
 from PyQt5.QtCore import Qt as qt
