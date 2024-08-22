@@ -7,7 +7,10 @@
 ##########################################################################
 
 import numpy as np
-from matplotlib.cm import get_cmap
+try:
+    from matplotlib.cm import get_cmap
+except:
+    from matplotlib.pyplot import get_cmap
 import matplotlib.pyplot as plt
 
 class EmotiRon():
